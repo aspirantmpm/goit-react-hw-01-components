@@ -1,7 +1,14 @@
-export const Profile = ({item:{ username, tag, location, avatar, stats: {
-    followers, views, likes}} }) => {
-    return (
-      <div class="profile">
+export const Profile = ({
+  item: {
+    username,
+    tag,
+    location,
+    avatar,
+    stats: { followers, views, likes },
+  },
+}) => {
+  return (
+    <div class="profile">
         <div class="description">
           <img
             src={avatar}
@@ -28,5 +35,5 @@ export const Profile = ({item:{ username, tag, location, avatar, stats: {
           </li>
         </ul>
       </div>
-    );
-}
+  );
+};

@@ -1,6 +1,11 @@
-import { ProfileList } from './ProfileList'
-import profile from '../user'
-
+import { Profile } from './Profile/Profile';
+import { Statistics } from './Statistics/Statistics';
+import { FriendList } from './FriendList/FriendList';
+import { TransactionHistory } from './TransactionHistory/TransactionHistory';
+import profile from './Profile/user';
+import stat from './Statistics/data';
+import friends from './FriendList/friends';
+import transaction from './TransactionHistory/transactions';
 
 export const App = () => {
   return (
@@ -11,10 +16,13 @@ export const App = () => {
         justifyContent: 'center',
         alignItems: 'center',
         fontSize: 40,
-        color: '#010101'
+        color: '#010101',
       }}
     >
-      <ProfileList items={ profile } />
+      <Profile item={profile} />
+      <Statistics items={stat} />
+      <FriendList items={friends} />
+      <TransactionHistory items={transaction} />
     </div>
   );
 };
