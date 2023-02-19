@@ -2,12 +2,12 @@ import { Statistic } from './StatisticItem';
 
 export const Statistics = ({ items }) => {
   return (
-    <section class="statistics">
-      <h2 class="title">Upload stats</h2>
+    <section className="statistics">
+      <h2 className="title">Upload stats</h2>
 
-      <ul class="stat-list">
+      <ul className="stat-list">
         {items.map(items => (
-          <li class="item" key={items.id}>
+          <li className="item" key={items.id}>
             <Statistic items={items} />
           </li>
         ))}
