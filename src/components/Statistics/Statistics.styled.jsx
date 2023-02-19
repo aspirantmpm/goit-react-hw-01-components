@@ -1,24 +1,38 @@
 import styled from 'styled-components';
 
 export const Section = styled.section`
-  margin: 100px;
+  width: 800px;
+  background-color: #e7ecf2;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 50px;
   text-align: center;
 `;
 export const Title = styled.h2`
-  color: darkblue;
+  color: black;
+  font-size: 50px;
+  font-size: ${props => {console.log(props)}}
 `;
 export const List = styled.ul`
   list-style: none;
   display: flex;
-  gap: 10px;
 `;
 export const Item = styled.li`
-  color: black;
+  color: white;
+  width: 120px;
+  padding: 20px;
 `;
+export const ItemDiv = styled.div`
+  gap: 10px;
+  display: flex;
+  flex-direction: column;
+`;
+
 export const Label = styled.span`
   text-align: center;
   padding-right: 10px;
+  font-size: 20px;
 `;
 export const Percentage = styled.span`
-  text-decoration: underline;
+  font-size: 40px;
 `;

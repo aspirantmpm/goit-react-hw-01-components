@@ -1,8 +1,5 @@
 import { Statistic } from './StatisticItem';
-import { Section } from './Statistics.styled';
-import { Title } from './Statistics.styled';
-import { List } from './Statistics.styled';
-import { Item } from './Statistics.styled';
+import { Section, Title, List, Item } from './Statistics.styled';
 
 export const Statistics = ({ items }) => {
   return (
