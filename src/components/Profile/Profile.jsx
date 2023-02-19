@@ -1,3 +1,15 @@
+import { List } from './Profile.styled';
+import { Li } from './Profile.styled';
+import { Avatar } from './Profile.styled';
+import { Description } from './Profile.styled';
+import { Section } from './Profile.styled';
+import { Name } from './Profile.styled';
+import { Tag } from './Profile.styled';
+import { Location } from './Profile.styled';
+import { Label } from './Profile.styled';
+import { Quantity } from './Profile.styled';
+
+
 export const Profile = ({
   item: {
     username,
@@ -8,28 +20,28 @@ export const Profile = ({
   },
 }) => {
   return (
-    <div className="profile">
-      <div className="description">
-        <img src={avatar} alt={username} className="avatar" />
-        <p className="name">{username}</p>
-        <p className="tag">@{tag}</p>
-        <p className="location">{location}</p>
-      </div>
+    <Section>
+      <Description>
+        <Avatar src={avatar} alt={username} />
+        <Name>{username}</Name>
+        <Tag>@{tag}</Tag>
+        <Location>{location}</Location>
+      </Description>
 
-      <ul className="stats">
-        <li>
-          <span className="label">Followers</span>
-          <span className="quantity">{followers}</span>
-        </li>
-        <li>
-          <span className="label">Views</span>
-          <span className="quantity">{views}</span>
-        </li>
-        <li>
-          <span className="label">Likes</span>
-          <span className="quantity">{likes}</span>
-        </li>
-      </ul>
-    </div>
+      <List>
+        <Li>
+          <Label>Followers</Label>
+          <Quantity>{followers}</Quantity>
+        </Li>
+        <Li>
+          <Label>Views</Label>
+          <Quantity>{views}</Quantity>
+        </Li>
+        <Li>
+          <Label>Likes</Label>
+          <Quantity>{likes}</Quantity>
+        </Li>
+      </List>
+    </Section>
   );
 };
