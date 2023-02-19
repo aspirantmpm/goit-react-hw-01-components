@@ -12,6 +12,9 @@ export const Thead = styled.thead`
 `;
 export const Tr = styled.tr`
   border: 3px solid black;
+  &:nth-child(2n) {
+    background-color: #efe4ad;
+  }
 `;
 export const Th = styled.th`
   border: 3px solid black;
