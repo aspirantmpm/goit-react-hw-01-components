@@ -9,7 +9,6 @@ import { Location } from './Profile.styled';
 import { Label } from './Profile.styled';
 import { Quantity } from './Profile.styled';
 
-
 export const Profile = ({
   item: {
     username,

@@ -1,17 +1,21 @@
 import { Statistic } from './StatisticItem';
+import { Section } from './Statistics.styled';
+import { Title } from './Statistics.styled';
+import { List } from './Statistics.styled';
+import { Item } from './Statistics.styled';
 
 export const Statistics = ({ items }) => {
   return (
-    <section className="statistics">
-      <h2 className="title">Upload stats</h2>
+    <Section>
+      <Title>Upload stats</Title>
 
-      <ul className="stat-list">
+      <List>
         {items.map(items => (
-          <li className="item" key={items.id}>
+          <Item key={items.id}>
             <Statistic items={items} />
-          </li>
+          </Item>
         ))}
-      </ul>
-    </section>
+      </List>
+    </Section>
   );
 };
