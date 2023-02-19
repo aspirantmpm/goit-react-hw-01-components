@@ -11,7 +11,7 @@ export const Statistics = ({ items }) => {
 
       <List>
         {items.map(items => (
-          <Item key={items.id}>
+          <Item key={items.id} style={{ backgroundColor: getRandomHexColor() }}>
             <Statistic items={items} />
           </Item>
         ))}
@@ -19,3 +19,7 @@ export const Statistics = ({ items }) => {
     </Section>
   );
 };
+
+function getRandomHexColor() {
+  return `#${Math.floor(Math.random() * 16777215).toString(16)}`;
+}

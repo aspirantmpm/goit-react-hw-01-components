@@ -1,13 +1,18 @@
 import { Friend } from './Friend';
+import { List } from './FriendList.style';
+import { Item } from './FriendList.style';
+import { Section } from './FriendList.style';
 
 export const FriendList = ({ items }) => {
   return (
-    <ul className="friend-list">
-          {items.map(items => (
-          <li className="item" key={items.id}>
-        <Friend items={items} />
-             </li> 
-      ))}
-    </ul>
+    <Section>
+      <List>
+        {items.map(items => (
+          <Item key={items.id}>
+            <Friend items={items} />
+          </Item>
+        ))}
+      </List>
+    </Section>
   );
 };

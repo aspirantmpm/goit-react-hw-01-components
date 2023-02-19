@@ -13,12 +13,12 @@ export const List = styled.ul`
   gap: 10px;
 `;
 export const Item = styled.li`
-  background-color: lightblue;
+  color: black;
 `;
 export const Label = styled.span`
   text-align: center;
   padding-right: 10px;
 `;
 export const Percentage = styled.span`
-  color: green;
+  text-decoration: underline;
 `;

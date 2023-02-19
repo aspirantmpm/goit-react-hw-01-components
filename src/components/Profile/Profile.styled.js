@@ -24,7 +24,7 @@ export const Avatar = styled.img`
   border-radius: 20px;
 `;
 
-export const Section = styled.div`
+export const Section = styled.section`
   margin: 100px;
 `;
 
