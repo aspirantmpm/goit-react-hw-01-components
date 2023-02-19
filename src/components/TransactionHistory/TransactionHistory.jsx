@@ -1,10 +1,5 @@
-// import { TransactionItem } from './TransactionItem';
-import { Table } from './TransactionHistory.styled';
-import { Thead } from './TransactionHistory.styled';
-import { Tr } from './TransactionHistory.styled';
-import { Th } from './TransactionHistory.styled';
-import { Td } from './TransactionHistory.styled';
-import { Section } from './TransactionHistory.styled';
+import PropTypes from 'prop-types';
+import { Section, Table, Thead, Tr, Th, Td } from './TransactionHistory.styled';
 
 export const TransactionHistory = ({ items }) => {
   return (
@@ -30,4 +25,15 @@ export const TransactionHistory = ({ items }) => {
       </Table>
     </Section>
   );
+};
+
+TransactionHistory.propTypes = {
+  array: PropTypes.arrayOf(
+    PropTypes.shape({
+      id: PropTypes.string.isRequired,
+      avatar: PropTypes.string.isRequired,
+      isOnline: PropTypes.string.isRequired,
+      name: PropTypes.string.isRequired,
+    })
+  ),
 };
