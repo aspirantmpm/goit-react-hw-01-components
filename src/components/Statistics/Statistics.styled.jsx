@@ -11,7 +11,6 @@ export const Section = styled.section`
 export const Title = styled.h2`
   color: black;
   font-size: 50px;
-  font-size: ${props => {console.log(props)}}
 `;
 export const List = styled.ul`
   list-style: none;
