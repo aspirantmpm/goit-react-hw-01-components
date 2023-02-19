@@ -1,13 +1,16 @@
-import { List } from './Profile.styled';
-import { Li } from './Profile.styled';
-import { Avatar } from './Profile.styled';
-import { Description } from './Profile.styled';
-import { Section } from './Profile.styled';
-import { Name } from './Profile.styled';
-import { Tag } from './Profile.styled';
-import { Location } from './Profile.styled';
-import { Label } from './Profile.styled';
-import { Quantity } from './Profile.styled';
+import PropTypes from 'prop-types';
+import {
+  List,
+  Li,
+  Avatar,
+  Description,
+  Section,
+  Name,
+  Tag,
+  Location,
+  Label,
+  Quantity,
+} from './Profile.styled';
 
 export const Profile = ({
   item: {
@@ -43,4 +46,17 @@ export const Profile = ({
       </List>
     </Section>
   );
+};
+
+Profile.propTypes = {
+  item: PropTypes.shape({
+    username: PropTypes.string.isRequired,
+    tag: PropTypes.string.isRequired,
+    avatar: PropTypes.string.isRequired,
+    stats: PropTypes.shape({
+      followers: PropTypes.number.isRequired,
+      views: PropTypes.number.isRequired,
+      likes: PropTypes.number.isRequired,
+    }),
+  }).isRequired,
 };
